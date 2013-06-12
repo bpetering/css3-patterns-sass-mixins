@@ -5,7 +5,7 @@
 
 // TODO companion JS library to animate these patterns?
 
-@mixin japanese-cube($bg-color) {
+@mixin japanese-cube($bg-color: #556) {
     $alt-one: darken($bg-color, 7%);
     $alt-two: lighten($bg-color, 24%);
 
@@ -20,7 +20,7 @@
     background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 
-@mixin carbon($bg-color) {
+@mixin carbon($bg-color: #131313) {
     $alt-one: lighten($bg-color, 2.7%);
     $alt-two: lighten($bg-color, 3%);      // TODO what if we need to bump up the value a little more?
     $alt-three: lighten($bg-color, 0.7%);
