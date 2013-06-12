@@ -1,0 +1,42 @@
+// CSS3 patterns as Sass mixins
+// Derived from http://lea.verou.me/css3patterns/
+
+// TODO set size, opacity, rotation where appropriate?
+
+// TODO companion JS library to animate these patterns?
+
+@mixin japanese-cube($bg-color) {
+    $alt-one: darken($bg-color, 7%);
+    $alt-two: lighten($bg-color, 24%);
+
+    background-color: $bg-color;
+    background-image: linear-gradient(30deg, $alt-one 12%, transparent 12.5%, transparent 87%, $alt-one 87.5%, $alt-one),
+    linear-gradient(150deg, $alt-one 12%, transparent 12.5%, transparent 87%, $alt-one 87.5%, $alt-one),
+    linear-gradient(30deg, $alt-one 12%, transparent 12.5%, transparent 87%, $alt-one 87.5%, $alt-one),
+    linear-gradient(150deg, $alt-one 12%, transparent 12.5%, transparent 87%, $alt-one 87.5%, $alt-one),
+    linear-gradient(60deg, $alt-two 25%, transparent 25.5%, transparent 75%, $alt-two 75%, $alt-two),
+    linear-gradient(60deg, $alt-two 25%, transparent 25.5%, transparent 75%, $alt-two 75%, $alt-two);
+    background-size:80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+@mixin carbon($bg-color) {
+    $alt-one: lighten($bg-color, 2.7%);
+    $alt-two: lighten($bg-color, 3%);      // TODO what if we need to bump up the value a little more?
+    $alt-three: lighten($bg-color, 0.7%);
+    $alt-four: lighten($bg-color, 3.8%);
+    $alt-five: lighten($bg-color, 6%);
+    $alt-six: lighten($bg-color, 6.5%);
+
+    // by Atle Mo (design), Sébastien Grosjean (code)
+    // http://www.zencocoon.com/
+    background:
+    linear-gradient(27deg, $alt-three 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, $alt-three 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, $alt-five 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, $alt-five 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, $alt-two 10px, transparent 10px),
+    linear-gradient($alt-four 25%, $alt-one 25%, $alt-one 50%, transparent 50%, transparent 75%, $alt-six 75%, $alt-six);
+    background-color: $bg-color;
+    background-size: 20px 20px;
+}
