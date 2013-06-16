@@ -1,7 +1,7 @@
 css3-patterns-sass-mixins
 =========================
 
-CSS3 Patterns (http://lea.verou.me/css3patterns/) converted to Sass mixins, with customizable colors
+CSS3 Patterns (http://lea.verou.me/css3patterns/) converted to Sass mixins, with customizable colors and sizes.
 
 
 Demo
@@ -20,7 +20,7 @@ Quick start
     @include "css3-pattern-mixins";
 
 3. When styling an element that can have a background: set, include
-   the mixin (and optionally specify a background color):
+   the mixin (and optionally specify colors and sizes):
 
     .some-element {
         @include japanese-cube();
