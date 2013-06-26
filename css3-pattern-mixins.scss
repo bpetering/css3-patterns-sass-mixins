@@ -169,3 +169,9 @@
 }
 
 @include "hearts";   // TODO dogfood, and see what folder structure is most useful
+
+
+
+// TODO - this would be a lot more useful as a library that could also somehow
+// generate images that match the CSS - to use for crappy browsers like IE < 10.
+// Would also need to take mobile into account... :(
