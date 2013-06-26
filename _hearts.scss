@@ -1,0 +1,16 @@
+@mixin hearts($bg-color: #b03, $size: 100px) {
+    background:
+        radial-gradient(circle closest-side at 60% 43%, $bg-color 26%, rgba(187,0,51,0) 27%), // TODO do we need to use rgba() instead of hex?
+        radial-gradient(circle closest-side at 40% 43%, $bg-color 26%, rgba(187,0,51,0) 27%),
+        radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+        radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+        radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+
+        radial-gradient(circle closest-side at 60% 43%, $bg-color 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        radial-gradient(circle closest-side at 40% 43%, $bg-color 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+    background-color: $bg-color;
+    background-size: $size $size;
+}

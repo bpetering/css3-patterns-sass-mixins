@@ -1,0 +1,171 @@
+// CSS3 patterns as Sass mixins
+// Converted from http://lea.verou.me/css3patterns/
+
+// TODO set size, opacity, rotation where appropriate?
+
+// TODO companion JS library to animate these patterns?
+
+// TODO add remaining credits
+
+// TODO test all of these
+
+// TODO
+
+@mixin japanese-cube($bg-color: #556) { // TODO size
+    $alt-one: darken($bg-color, 7%);
+    $alt-two: lighten($bg-color, 24%);
+
+    background-color: $bg-color;
+    background-image: linear-gradient(30deg, $alt-one 12%, transparent 12.5%, transparent 87%, $alt-one 87.5%, $alt-one),
+    linear-gradient(150deg, $alt-one 12%, transparent 12.5%, transparent 87%, $alt-one 87.5%, $alt-one),
+    linear-gradient(30deg, $alt-one 12%, transparent 12.5%, transparent 87%, $alt-one 87.5%, $alt-one),
+    linear-gradient(150deg, $alt-one 12%, transparent 12.5%, transparent 87%, $alt-one 87.5%, $alt-one),
+    linear-gradient(60deg, $alt-two 25%, transparent 25.5%, transparent 75%, $alt-two 75%, $alt-two),
+    linear-gradient(60deg, $alt-two 25%, transparent 25.5%, transparent 75%, $alt-two 75%, $alt-two);
+    background-size:80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+
+
+@mixin microbial-mat($bg-color: rgba(96, 16, 48, 0), $size: 20px) {
+    background: radial-gradient(circle at 0% 50%, $bg-color 9px, #613 10px, $bg-color 11px) 0px 10px,
+    radial-gradient(at 100% 100%, $bg-color 9px, #613 10px, $bg-color 11px), #8a3;
+    background-size: $size $size;
+}
+
+@mixin stairs($color1: #999, $color2: #444, $size: 16px) {
+    background: linear-gradient(63deg, $color1 23%, transparent 23%) 7px 0,
+    linear-gradient(63deg, transparent 74%, $color1 78%),
+    linear-gradient(63deg, transparent 34%, $color1 38%, $color1 58%, transparent 62%), $color2;
+    background-size: $size $size*3;
+}
+
+
+// TODO change bg-color to 'color' or 'color1'?
+@mixin half-rombes($bg-color: #36c, $size: 15px) {
+    background: $bg-color;
+    background: linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
+    linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0,
+    linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
+    linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px,
+    $bg-color;
+    background-size: $size $size*2
+}
+
+@mixin arrows($color1: #92baac, $color2: #e1ebbd, $size: 128px) {
+    background: linear-gradient(45deg, $color1 45px, transparent 45px)64px 64px,
+    linear-gradient(45deg, $color1 45px, transparent 45px,transparent 91px, $color2 91px, $color2 135px, transparent 135px),
+    linear-gradient(-45deg, $color1 23px, transparent 23px, transparent 68px,$color1 68px,$color1 113px,transparent 113px,transparent 158px,$color1 158px);
+    background-color:$color2;
+    background-size: $size $size;
+}
+
+@mixin zig-zag($color1: #ECEDDC, $color2: #EC173A, $size: 100px) {
+    // Plain CSS source by eCSSpert
+    // http://twitter.com/ecsspert
+    background: linear-gradient(135deg,  25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, $color1 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, $color1 25%, transparent 25%),
+    linear-gradient(45deg, $color1 25%, transparent 25%);
+    background-size: $size $size;
+    background-color: $color2;
+}
+
+@mixin weave($color1: #708090, $color2: #d9ecff, $size: 64px) {
+    // Plain CSS by by Jeroen Franse
+    // http://twitter.com/jroenf
+    background: linear-gradient(135deg, $color1 22px, $color2 22px, $color2 24px, transparent 24px, transparent 67px, $color2 67px, $color2 69px, transparent 69px),
+    linear-gradient(225deg, $color1 22px, $color2 22px, $color2 24px, transparent 24px, transparent 67px, $color2 67px, $color2 69px, transparent 69px)0 64px;
+    background-color:$color1;
+    background-size: $size $size*2
+}
+
+@mixin upholstery($size: 100px) {
+    // Plain CSS by Nate Eagle
+    // http://nateeagle.com/
+
+    // TODO finish converting colors
+    background: radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+    linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+    linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+    background-color: #300;
+    background-size: $size $size;
+}
+
+@mixin starry-night($bg-color: black) {
+    // Plain CSS by Lea Verou
+    // http://lea.verou.me/
+    background-color: $bg-color;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+@mixin marrakesh($bg-color: white, $pat-color: midnightblue, $size: 30px) {
+    // Plain CSS by by Divya Manian
+    // http://nimbupani.com/
+    $scale: ($size / 30px);
+    background-color: $bg-color;
+    background-image:
+        radial-gradient($pat-color 9px * $scale, transparent 10px * $scale),
+        repeating-radial-gradient($pat-color 0, $pat-color (4px * $scale), transparent (5px * $scale), transparent (20px * $scale), $pat-color (21px * $scale), $pat-color (25px * $scale), transparent (26px * $scale), transparent (50px * $scale));
+    background-size: $size $size, $size*3 $size*3;
+    background-position: 0 0;
+}
+
+@mixin rainbow-bokeh() {
+    background:
+        radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+        radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+        radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+        radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+        radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+        radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+        linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
+    background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+    background-color: #840b2a;
+}
+
+@mixin carbon($bg-color: #131313) { // TODO size
+    $alt-one: lighten($bg-color, 2.7%);
+    $alt-two: lighten($bg-color, 3%);      // TODO what if we need to bump up the value a little more?
+    $alt-three: lighten($bg-color, 0.7%);
+    $alt-four: lighten($bg-color, 3.8%);
+    $alt-five: lighten($bg-color, 6%);
+    $alt-six: lighten($bg-color, 6.5%);
+
+    // by Atle Mo (design), Sébastien Grosjean (code)
+    // http://www.zencocoon.com/
+    background: linear-gradient(27deg, $alt-three 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, $alt-three 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, $alt-five 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, $alt-five 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, $alt-two 10px, transparent 10px),
+    linear-gradient($alt-four 25%, $alt-one 25%, $alt-one 50%, transparent 50%, transparent 75%, $alt-six 75%, $alt-six);
+    background-color: $bg-color;
+    background-size: 20px 20px;
+}
+
+@mixin carbon-fibre($bg-color: #282828, $size: 16px) {
+    background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) ($size / 2) ($size / 2),
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) ($size / 2) ($size / 2 + 1px);
+    background-color: $bg-color;
+    background-size: $size $size;
+}
+
+@include "hearts";   // TODO dogfood, and see what folder structure is most useful
