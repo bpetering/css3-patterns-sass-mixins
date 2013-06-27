@@ -9,7 +9,8 @@
 
 // TODO test all of these
 
-// TODO
+// TODO - could these be converted to SVG?
+// -> http://mobile.smashingmagazine.com/2013/05/29/the-state-of-responsive-web-design/
 
 @mixin japanese-cube($bg-color: #556) { // TODO size
     $alt-one: darken($bg-color, 7%);
@@ -175,3 +176,147 @@
 // TODO - this would be a lot more useful as a library that could also somehow
 // generate images that match the CSS - to use for crappy browsers like IE < 10.
 // Would also need to take mobile into account... :(
+
+// http://coding.smashingmagazine.com/2013/06/02/clown-car-technique-solving-for-adaptive-images-in-responsive-web-design/
+
+@mixin argyle($bg-color: #6d695c, $size: 70px) {
+    // Plain CSS by Anna Kassner
+    // http://annamation.ca/
+    background-color: $bg-color;
+    background-image:
+        repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+        repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+        linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+        linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-size: $size (12/7 * $size);
+}
+
+@mixin steps($bg-color: #FF7D9D, $pat-color: #C90032, $size: 58px) {
+    // Plain CSS by Nicolas Gallagher
+    // http://nicolasgallagher.com/
+    background-color: $bg-color;
+        background-size: $size $size;
+        background-position: 0px 2px, 4px 35px, 29px 31px, 33px 6px,
+        0px 36px, 4px 2px, 29px 6px, 33px 30px;
+        background-image:
+        linear-gradient(335deg,  23px, transparent 23px),
+        linear-gradient(155deg, $pat-color 23px, transparent 23px),
+        linear-gradient(335deg, $pat-color 23px, transparent 23px),
+        linear-gradient(155deg, $pat-color 23px, transparent 23px),
+
+        linear-gradient(335deg, $pat-color 10px, transparent 10px),
+        linear-gradient(155deg, $pat-color 10px, transparent 10px),
+        linear-gradient(335deg, $pat-color 10px, transparent 10px),
+        linear-gradient(155deg, $pat-color 10px, transparent 10px);
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
+@mixin ___($bg-color: #000, $size: 16px) {
+    // Plain CSS by Foo Bar
+    // http://foo
+}
+
