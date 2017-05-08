@@ -1,2 +1,22 @@
-@include "../css3-pattern-mixins";
-
+@import "../css3-pattern-mixins";
+.square-25 {
+  display: inline-block;
+  width: 24%;
+  margin: 0;
+  height: 250px;
+  height: 33vh;
+  margin-right: .25%;
+  background-color: yellow;
+}
+.japan-cube {
+  @include japanese-cube(#6F84FF, .15);
+}
+.carbon-bg {
+  @include carbon(black, 8px);
+}
+.microbial {
+  @include microbial-mat();
+}
+.upholstery {
+  @include upholstery(90px);
+}
